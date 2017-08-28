@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using UnityEngine;
 
 public class TetrahedronScript : MonoBehaviour {
@@ -6,6 +6,7 @@ public class TetrahedronScript : MonoBehaviour {
 	 
 	 //	Tetrahedron defined by (+-1,0,-w) and (0,+-1,w) where w = 1/sqrt(2)
 
+	public Material tetrahedronMaterial;
 	public Vector3[] p;
 	float w = 1 / Mathf.Sqrt (2);
 	Mesh tetrahedronMesh;
@@ -24,7 +25,7 @@ public class TetrahedronScript : MonoBehaviour {
 
 	void Generate(){
 
-		gameObject.AddComponent<MeshRenderer> ();
+		gameObject.AddComponent<MeshRenderer> ().material = tetrahedronMaterial;
 
 		tetrahedronMesh = new Mesh ();
 		gameObject.AddComponent<MeshFilter> ().mesh = tetrahedronMesh;
@@ -59,7 +60,6 @@ public class TetrahedronScript : MonoBehaviour {
 
 		tetrahedronMesh.triangles = triangles;
 		tetrahedronMesh.RecalculateNormals ();
-
 	}
 
 
@@ -71,6 +71,10 @@ public class TetrahedronScript : MonoBehaviour {
 
 	void Awake (){
 		Generate ();
+	}
+
+	void Update(){
+		transform.localRotation = Quaternion.Euler ((float)DateTime.Now.TimeOfDay.TotalSeconds * 15f,(float)DateTime.Now.TimeOfDay.TotalSeconds * 20f,(float)DateTime.Now.TimeOfDay.TotalSeconds * 25f);
 	}
 		
 
