@@ -10,7 +10,7 @@ public class IcosahedronScript : MonoBehaviour {
 	public Vector3[] p;
 	Mesh icosahedronMesh;
 
-
+	/*
 	private void OnDrawGizmos () {
 		if (p == null) {
 			return;
@@ -20,6 +20,7 @@ public class IcosahedronScript : MonoBehaviour {
 			Gizmos.DrawSphere(p[i], 0.1f);
 		}
 	}
+	*/
 
 
 
@@ -48,45 +49,96 @@ public class IcosahedronScript : MonoBehaviour {
 		p [10] = new Vector3 (1f, 0f, -2f);
 		p [11] = new Vector3 (1f, 0f, 2f);
 		icosahedronMesh.vertices = p;
-		/*
-		int[] triangles = new int[24];
+		
+		int[] triangles = new int[60];
 
-		triangles [0] = 3;
-		triangles [1] = 0;
-		triangles [2] = 5;
+		// Front 
 
-		triangles [3] = 3;
-		triangles [4] = 5;
-		triangles [5] = 1;
+		triangles [0] = 10;
+		triangles [1] = 6;
+		triangles [2] = 3;
+
+		triangles [3] = 6;
+		triangles [4] = 10;
+		triangles [5] = 8;
 
 		triangles [6] = 3;
-		triangles [7] = 1;
-		triangles [8] = 4;
+		triangles [7] = 6;
+		triangles [8] = 7;
 
-		triangles [9] = 3;
-		triangles [10] = 4;
-		triangles [11] = 0;
+		triangles [9] = 10;
+		triangles [10] = 3;
+		triangles [11] = 2;
 
-		triangles [12] = 2;
-		triangles [13] = 1;
-		triangles [14] = 5;
+		triangles [12] = 10;
+		triangles [13] = 4;
+		triangles [14] = 8;
 
-		triangles [15] = 2;
-		triangles [16] = 5;
-		triangles [17] = 0;
+		triangles [15] = 10;
+		triangles [16] = 2;
+		triangles [17] = 4;
 
+		triangles [18] = 6;
+		triangles [19] = 8;
+		triangles [20] = 1;
 
-		triangles [18] = 2;
-		triangles [19] = 0;
-		triangles [20] = 4;
+		triangles [21] = 6;
+		triangles [22] = 1;
+		triangles [23] = 7;
 
-		triangles [21] = 2;
-		triangles [22] = 4;
-		triangles [23] = 1;
+		triangles [24] = 3;
+		triangles [25] = 7;
+		triangles [26] = 11;
+
+		triangles [27] = 3;
+		triangles [28] = 11;
+		triangles [29] = 2;
+
+		// Back
+
+		triangles [30] = 0;
+		triangles [31] = 5;
+		triangles [32] = 9;
+
+		triangles [33] = 0;
+		triangles [34] = 9;
+		triangles [35] = 1;
+
+		triangles [36] = 9;
+		triangles [37] = 5;
+		triangles [38] = 11;
+
+		triangles [39] = 5;
+		triangles [40] = 0;
+		triangles [41] = 4;
+
+		triangles [42] = 0;
+		triangles [43] = 1;
+		triangles [44] = 8;
+
+		triangles [45] = 0;
+		triangles [46] = 8;
+		triangles [47] = 4;
+
+		triangles [48] = 4;
+		triangles [49] = 7;
+		triangles [50] = 1;
+
+		triangles [51] = 4;
+		triangles [52] = 11;
+		triangles [53] = 7;
+
+		triangles [54] = 5;
+		triangles [55] = 2;
+		triangles [56] = 11;
+
+		triangles [57] = 5;
+		triangles [58] = 4;
+		triangles [59] = 2;
 
 		icosahedronMesh.triangles = triangles;
 		icosahedronMesh.RecalculateNormals ();
-		*/
+		
 	}
 
 
