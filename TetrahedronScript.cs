@@ -10,6 +10,8 @@ public class TetrahedronScript : MonoBehaviour {
 	public Vector3[] p;
 	float w = 1 / Mathf.Sqrt (2);
 	Mesh tetrahedronMesh;
+	float s = 2f;
+	Vector3 normalizedScale = new Vector3(1f/s, 1f/s, 1f/s);
 
 	/*
 	private void OnDrawGizmos () {
@@ -61,6 +63,8 @@ public class TetrahedronScript : MonoBehaviour {
 
 		tetrahedronMesh.triangles = triangles;
 		tetrahedronMesh.RecalculateNormals ();
+
+		transform.localScale = normalizedScale;
 	}
 
 

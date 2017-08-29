@@ -9,6 +9,8 @@ public class IcosahedronScript : MonoBehaviour {
 	public Material icosahedronMaterial;
 	public Vector3[] p;
 	Mesh icosahedronMesh;
+	float s = Mathf.Sqrt(6f);
+	Vector3 normalizedScale = new Vector3(1f/s, 1f/s, 1f/s);
 
 	/*
 	private void OnDrawGizmos () {
@@ -139,6 +141,7 @@ public class IcosahedronScript : MonoBehaviour {
 		icosahedronMesh.triangles = triangles;
 		icosahedronMesh.RecalculateNormals ();
 		
+		transform.localScale = normalizedScale;
 	}
 
 

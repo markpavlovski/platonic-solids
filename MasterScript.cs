@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class MasterScript : MonoBehaviour {
 
+	/*
+	for side length 1, the volumes are:
+
+		tetrahedronObject		sqrt(2)/12
+		cube 					1
+		octahedron 				sqrt(2)/3
+		icosahedron 			(15+5sqrt(5))/12
+		dodecahedron 			(15+7sqrt(5))/4	
+	*/
+
 	public Material generalMaterial;
 	float r = 15f;
 	float theta = 2* Mathf.PI / 5;

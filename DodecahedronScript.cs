@@ -12,6 +12,9 @@ public class DodecahedronScript : MonoBehaviour {
 	Mesh dodecahedronMesh;
 	float phi = (1 + Mathf.Sqrt (5))/2;
 
+	float s = 3f;
+	Vector3 normalizedScale = new Vector3(1f/s, 1f/s, 1f/s);
+
 	/*
 	private void OnDrawGizmos () {
 		if (p == null) {
@@ -99,6 +102,8 @@ public class DodecahedronScript : MonoBehaviour {
 
 		dodecahedronMesh.triangles = triangles;
 		dodecahedronMesh.RecalculateNormals ();
+
+		transform.localScale = normalizedScale;
 		
 	}
 
