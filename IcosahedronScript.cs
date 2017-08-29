@@ -120,11 +120,11 @@ public class IcosahedronScript : MonoBehaviour {
 		triangles [46] = 8;
 		triangles [47] = 4;
 
-		triangles [48] = 4;
+		triangles [48] = 9;
 		triangles [49] = 7;
 		triangles [50] = 1;
 
-		triangles [51] = 4;
+		triangles [51] = 9;
 		triangles [52] = 11;
 		triangles [53] = 7;
 
