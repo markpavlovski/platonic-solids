@@ -11,7 +11,7 @@ public class TetrahedronScript : MonoBehaviour {
 	float w = 1 / Mathf.Sqrt (2);
 	Mesh tetrahedronMesh;
 
-
+	/*
 	private void OnDrawGizmos () {
 		if (p == null) {
 			return;
@@ -21,6 +21,7 @@ public class TetrahedronScript : MonoBehaviour {
 			Gizmos.DrawSphere(p[i], 0.1f);
 		}
 	}
+	*/
 		
 
 	void Generate(){

@@ -71,21 +71,11 @@ public class DodecahedronScript : MonoBehaviour {
 		faces[3] =  new int [5] {18,19,6,14,4};
 		faces[4] =  new int [5] {4,14,12,0,8};
 		faces[5] =  new int [5] {8,0,16,1,9};
-
 		faces[6] =  new int [5] {3,17,2,10,11};
-
-		faces[7] =  new int [5] {11,7,15,13,3};
-		//faces[7] =  new int [5] {3,13,15,7,11};
-	
+		faces[7] =  new int [5] {11,7,15,13,3};	
 		faces[8] =  new int [5] {10,6,19,7,11};
-		//faces[8] =  new int [5] {11,7,19,6,10};
-
 		faces[9] =  new int [5] {2,12,14,6,10};
-		//faces[9] =  new int [5] {10,6,14,12,2};
-
 		faces[10] =  new int [5] {17,16,0,12,2};
-		//faces[10] =  new int [5] {2,12,0,16,17};
-
 		faces[11] =  new int [5] {3,13,1,16,17};
 
 

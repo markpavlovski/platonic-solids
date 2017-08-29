@@ -10,7 +10,7 @@ public class CubeScript : MonoBehaviour {
 	public Vector3[] p;
 	Mesh cubeMesh;
 
-
+	/*
 	private void OnDrawGizmos () {
 		if (p == null) {
 			return;
@@ -20,6 +20,7 @@ public class CubeScript : MonoBehaviour {
 			Gizmos.DrawSphere(p[i], 0.1f);
 		}
 	}
+	*/
 
 
 	void Generate(){
