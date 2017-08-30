@@ -12,8 +12,8 @@ public class DodecahedronScript : MonoBehaviour {
 	Mesh dodecahedronMesh;
 	float phi = (1 + Mathf.Sqrt (5))/2;
 
-	float s = 3f;
-	Vector3 normalizedScale = new Vector3(1f/s, 1f/s, 1f/s);
+	static float s = 3f;
+	public Vector3 normalizedScale = new Vector3(1f/s, 1f/s, 1f/s);
 
 	/*
 	private void OnDrawGizmos () {
@@ -30,7 +30,7 @@ public class DodecahedronScript : MonoBehaviour {
 
 
 	void Generate(){
-
+		
 		gameObject.AddComponent<MeshRenderer> ().material = dodecahedronMaterial;
 
 		dodecahedronMesh = new Mesh ();
@@ -104,7 +104,7 @@ public class DodecahedronScript : MonoBehaviour {
 		dodecahedronMesh.RecalculateNormals ();
 
 		transform.localScale = normalizedScale;
-		
+
 	}
 
 

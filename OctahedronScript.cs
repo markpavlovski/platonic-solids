@@ -9,8 +9,8 @@ public class OctahedronScript : MonoBehaviour {
 	public Material octahedronMaterial;
 	public Vector3[] p;
 	Mesh octahedronMesh;
-	float s = Mathf.Sqrt(2f);
-	Vector3 normalizedScale = new Vector3(1f/s, 1f/s, 1f/s);
+	static float s = Mathf.Sqrt(2f);
+	public Vector3 normalizedScale = new Vector3(1f/s, 1f/s, 1f/s);
 
 	/*
 	private void OnDrawGizmos () {
@@ -82,6 +82,7 @@ public class OctahedronScript : MonoBehaviour {
 		octahedronMesh.RecalculateNormals ();
 
 		transform.localScale = normalizedScale;
+
 	}
 
 
