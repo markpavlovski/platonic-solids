@@ -10,8 +10,7 @@ public class TetrahedronScript : MonoBehaviour {
 	public Vector3[] p;
 	float w = 1 / Mathf.Sqrt (2);
 	Mesh tetrahedronMesh;
-	static float s = 2f;
-	public Vector3 normalizedScale = new Vector3(1f/s, 1f/s, 1f/s);
+	static float normalizedScale = 1f/2f;
 
 	/*
 	private void OnDrawGizmos () {
@@ -36,11 +35,20 @@ public class TetrahedronScript : MonoBehaviour {
 
 
 		p = new Vector3[4];
+		Vector2[] uv = new Vector2[4];
+
 		p [0] = new Vector3 (-1f, 0f, -w);
 		p [1] = new Vector3 (1f, 0f, -w);
 		p [2] = new Vector3 (0f, -1f, w);
 		p [3] = new Vector3 (0f, 1f, w);
 		tetrahedronMesh.vertices = p;
+
+		uv [0] = new Vector2 (0f, 0f);
+		uv [1] = new Vector2 (1f, 0f);
+		uv [2] = new Vector2 (0f, 1f);
+		uv [3] = new Vector2 (1f, 1f);
+
+		tetrahedronMesh.uv = uv;
 
 
 		int[] triangles = new int[12];
@@ -64,7 +72,7 @@ public class TetrahedronScript : MonoBehaviour {
 		tetrahedronMesh.triangles = triangles;
 		tetrahedronMesh.RecalculateNormals ();
 
-		transform.localScale = normalizedScale;
+		transform.localScale *= normalizedScale;
 
 	}
 
@@ -80,8 +88,9 @@ public class TetrahedronScript : MonoBehaviour {
 	}
 
 	void Update(){
-		transform.localRotation = Quaternion.Euler ((float)DateTime.Now.TimeOfDay.TotalSeconds * 15f,(float)DateTime.Now.TimeOfDay.TotalSeconds * 20f,(float)DateTime.Now.TimeOfDay.TotalSeconds * 25f);
-	}
+		//transform.localRotation = Quaternion.Euler ((float)DateTime.Now.TimeOfDay.TotalSeconds * 15f,(float)DateTime.Now.TimeOfDay.TotalSeconds * 20f,(float)DateTime.Now.TimeOfDay.TotalSeconds * 25f);
+		transform.localRotation = Quaternion.Euler (-45f, 0f, 0f);
+		}
 		
 
 }

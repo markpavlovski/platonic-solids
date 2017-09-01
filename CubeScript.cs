@@ -9,8 +9,7 @@ public class CubeScript : MonoBehaviour {
 	public Material cubeMaterial;
 	public Vector3[] p;
 	Mesh cubeMesh;
-	static float s = 2f;
-	public Vector3 normalizedScale = new Vector3(1f/s, 1f/s, 1f/s);
+	float normalizedScale = 1f/2f;
 
 
 	/*
@@ -100,7 +99,7 @@ public class CubeScript : MonoBehaviour {
 		cubeMesh.triangles = triangles;
 		cubeMesh.RecalculateNormals ();
 
-		transform.localScale = normalizedScale;
+		transform.localScale *= normalizedScale;
 
 	}
 
