@@ -89,7 +89,7 @@ public class TetrahedronScript : MonoBehaviour {
 
 	void Update(){
 		transform.localRotation = Quaternion.Euler ((float)DateTime.Now.TimeOfDay.TotalSeconds * 15f* 2,(float)DateTime.Now.TimeOfDay.TotalSeconds * 20f* 2,(float)DateTime.Now.TimeOfDay.TotalSeconds * 25f* 2);
-		//transform.localRotation = Quaternion.Euler (0f, 0f, 0f);
+		transform.localRotation = Quaternion.Euler (0f, 0f, 0f);
 		}
 		
 
