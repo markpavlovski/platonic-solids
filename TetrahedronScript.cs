@@ -10,7 +10,7 @@ public class TetrahedronScript : MonoBehaviour {
 	public Vector3[] p;
 	float w = 1 / Mathf.Sqrt (2);
 	Mesh tetrahedronMesh;
-	static float normalizedScale = 1f/2f;
+	static float normalizedScale = 1f/1f;
 
 	/*
 	private void OnDrawGizmos () {
@@ -88,8 +88,8 @@ public class TetrahedronScript : MonoBehaviour {
 	}
 
 	void Update(){
-		//transform.localRotation = Quaternion.Euler ((float)DateTime.Now.TimeOfDay.TotalSeconds * 15f,(float)DateTime.Now.TimeOfDay.TotalSeconds * 20f,(float)DateTime.Now.TimeOfDay.TotalSeconds * 25f);
-		transform.localRotation = Quaternion.Euler (-45f, 0f, 0f);
+		transform.localRotation = Quaternion.Euler ((float)DateTime.Now.TimeOfDay.TotalSeconds * 15f* 2,(float)DateTime.Now.TimeOfDay.TotalSeconds * 20f* 2,(float)DateTime.Now.TimeOfDay.TotalSeconds * 25f* 2);
+		//transform.localRotation = Quaternion.Euler (0f, 0f, 0f);
 		}
 		
 
