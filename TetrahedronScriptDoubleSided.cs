@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class TetrahedronScript : MonoBehaviour {
+public class TetrahedronScriptDoubleSided : MonoBehaviour {
 
 	 
 	 //	Tetrahedron defined by (+-1,0,-w) and (0,+-1,w) where w = 1/sqrt(2)
@@ -51,7 +51,7 @@ public class TetrahedronScript : MonoBehaviour {
 		tetrahedronMesh.uv = uv;
 
 
-		int[] triangles = new int[12];
+		int[] triangles = new int[24];
 
 		triangles [0] = 0;
 		triangles [1] = 3;
@@ -68,6 +68,22 @@ public class TetrahedronScript : MonoBehaviour {
 		triangles [9] = 1;
 		triangles [10] = 3;
 		triangles [11] = 2;
+
+		triangles [12] = 0;
+		triangles [13] = 1;
+		triangles [14] = 3;
+
+		triangles [15] = 0;
+		triangles [16] = 2;
+		triangles [17] = 1;
+
+		triangles [18] = 0;
+		triangles [19] = 3;
+		triangles [20] = 2;
+
+		triangles [21] = 1;
+		triangles [22] = 2;
+		triangles [23] = 3;
 
 		tetrahedronMesh.triangles = triangles;
 		tetrahedronMesh.RecalculateNormals ();
@@ -88,7 +104,7 @@ public class TetrahedronScript : MonoBehaviour {
 	}
 
 	void Update(){
-		transform.localRotation = Quaternion.Euler ((float)DateTime.Now.TimeOfDay.TotalSeconds * 15f* 2,(float)DateTime.Now.TimeOfDay.TotalSeconds * 20f* 2,(float)DateTime.Now.TimeOfDay.TotalSeconds * 25f* 2);
+		transform.localRotation = Quaternion.Euler (-135f,(float)DateTime.Now.TimeOfDay.TotalSeconds * 15f* 4,0f);
 		//transform.localRotation = Quaternion.Euler (-45f, 0f, 0f);
 		//transform.localRotation = Quaternion.Euler (0, -45f, 0f);
 		}
